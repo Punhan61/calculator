@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости грузоперевозки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">ГрузЛогистик</div>
+            <nav>
+                <a href="index.html" class="nav-link active">Калькулятор</a>
+                <a href="404.html" class="nav-link">Тест 404</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h1>Расчёт стоимости грузоперевозки</h1>
+            <p class="subtitle">Укажите параметры маршрута и груза для точного расчёта</p>
+
+            <form id="calcForm" novalidate>
+                <div class="form-group">
+                    <label for="distance">Расстояние перевозки (км)</label>
+                    <input type="text" id="distance" placeholder="Например: 350">
+                    <span class="error-msg" id="distanceError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Вес груза (кг)</label>
+                    <input type="text" id="weight" placeholder="Например: 1200">
+                    <span class="error-msg" id="weightError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tariff">Тариф (руб./км за базовый рейс)</label>
+                    <input type="text" id="tariff" placeholder="Например: 45">
+                    <span class="error-msg" id="tariffError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Рассчитать стоимость</button>
+            </form>
+
+            <div id="resultBox" class="result-box hidden">
+                <span>Итоговая стоимость:</span>
+                <strong id="totalPrice">0 ₽</strong>
+            </div>
+        </section>
+
+        <section class="card history-section">
+            <div class="history-header">
+                <h2>Журнал запросов</h2>
+                <button type="button" id="clearHistoryBtn" class="btn btn-danger">Очистить журнал</button>
+            </div>
+            <div id="historyList" class="history-list">
+                <p class="empty-history">История расчётов пока пуста.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
