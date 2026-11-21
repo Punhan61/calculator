@@ -1,5 +1,5 @@
 :root {
-    --primary: #2563eb;
+    --primary: #059669;
     --primary-hover: #1d4ed8;
     --danger: #dc2626;
     --danger-hover: #b91c1c;
@@ -130,7 +130,7 @@ input[type="text"].input-error {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     text-align: center;
